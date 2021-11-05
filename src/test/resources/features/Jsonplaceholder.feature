@@ -7,7 +7,7 @@
     Eu como Administrator , quero cadastrar, buscar, atualizar e excluir usuarios do sistema.
 
     Contexto: Authorization e Authentication
-      Dado que possuo gorest token valido
+      Dado que possuo token valido
       @post
   Cenario: Cadastrar novo posts API jsonplaceholder
 

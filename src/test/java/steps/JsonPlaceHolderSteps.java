@@ -14,13 +14,13 @@ import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-public class GorestSteps extends ApiRequest {
+public class JsonPlaceHolderSteps extends ApiRequest {
 
     PropertiesUtils propertiesUtils = new PropertiesUtils();
     JsonUtils jsonUtils = new JsonUtils();
     ApiHeaders apiHeaders = new ApiHeaders();
 
-    @Dado("que possuo gorest token valido")
+    @Dado("que possuo token valido")
     public void quePossuoGorestTokenValido() {
        token = propertiesUtils.getProp("token");
         //System.out.println(propertiesUtils.getProp("token_gorest"));
