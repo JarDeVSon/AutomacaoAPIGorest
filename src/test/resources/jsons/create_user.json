@@ -1,6 +1,6 @@
 {
-  "name": "Tenali Ramakrishna",
-  "gender": "male",
-  "email": "tenali.ramakrishna@25ce.com",
-  "status": "active"
+  "userId": 1,
+  "id": 1,
+  "title": "QA Automacao API",
+  "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
 }

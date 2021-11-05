@@ -22,19 +22,23 @@ public class GorestSteps extends ApiRequest {
 
     @Dado("que possuo gorest token valido")
     public void quePossuoGorestTokenValido() {
-       token = propertiesUtils.getProp("token_gorest");
+       token = propertiesUtils.getProp("token");
         //System.out.println(propertiesUtils.getProp("token_gorest"));
     }
-    @Quando("envio um request de cadastro de usuario com dados validosc")
-    public void envioUmRequestDeCadastroDeUsuarioComDadosValidosc() throws IOException {
-        super.uri = propertiesUtils.getProp("uri_gorest");
+
+    @Quando("envio um request de cadastro de posts com dados validos")
+    public void envioUmRequestDeCadastroDePostsComDadosValidos() throws IOException {
+        super.uri = propertiesUtils.getProp("uri_jsonplaceholder");
         super.headers = apiHeaders.getHeaders(token);
         super.body = jsonUtils.parseJSONFile();
         super.POST();
         //System.out.println(body);
     }
-    @Entao("o usuario deve ser criado corretamente")
-    public void oUsuarioDeveSerCriadoCorretamente() {
+    @Entao("o post deve ser criado corretamente")
+    public void oPostDeveSerCriadoCorretamente() {
+
+        assertEquals(body.get("title"), response.jsonPath().getString("title"));
+        assertEquals(body.get("body"), response.jsonPath().getString("body"));
 
     }
     @Entao("o status code deve ser {int}")
